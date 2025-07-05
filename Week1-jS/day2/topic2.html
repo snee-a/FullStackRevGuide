@@ -1,0 +1,59 @@
+<!-- DOM-Document Object Model
+ek browser ka structure hota hai jisme HTML elements ko JavaScript ke through access aur control kiya ja sakta hai. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manipulation</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>hello</h1>
+    <button id="but"></button>
+    <p id="demo">This is demo (id)</p>
+
+    <p class="myclass">this is class accessing demo</p>
+
+    <p id="idquery">Hey </p>
+    <p class="hey">p1</p>
+    <p class="hey">p2</p>
+    <p class="hey">p3</p>
+    <p class="hey">p4</p>
+    <p class="hey">p5</p>
+</body>
+<script>
+    // 1-accessing by id
+    document.getElementById("demo").innerText="Updated Text";
+    // getElementById is a method, while innerHTML is a property.
+
+    //2-classname
+    let cls=document.getElementsByClassName("myclass");
+    cls[0].innerText="updated div 2";
+
+    // 3-queryselector
+    let element=document.querySelector("#idquery");
+    element.innerText="updated query selector";
+
+    // 4-querySelectorAll
+    let ps=document.querySelectorAll(".hey");
+    // ps.innerText="hey we are updated using query selector all"; invalid because queryselectorall returns a nodelist( similar to array)
+    for (p of ps){
+        p.innerText="hey i am updated text";
+    }
+    // 5-getelementbytagname
+    let diva=document.getElementsByTagName("h1");
+    diva.innerText="hey i am updated div";
+
+    //Changing CSS Styles with JS
+    element.style.backgroundColor="red";
+
+    //event listeners
+    let but=document.getElementById("but");
+    but.addEventListener("click",()=>{
+        alert("Hey you just clicked the button");
+    })
+
+</script>
+</html>

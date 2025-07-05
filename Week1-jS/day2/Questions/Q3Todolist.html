@@ -1,0 +1,57 @@
+<!-- ToDo list -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+</head>
+<style>
+    #enterTask{
+        height:30px;
+        width:200px;
+        background-color: peachpuff;
+        /* color:red; */
+        font-size:20px;
+
+    }
+    #add{
+        height: 30px;
+        width:100px;
+        background-color: peachpuff;
+        font-size:20px;
+    }
+    #tasklist{
+        font-size: 30px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+</style>
+<body>
+    <form action="">
+        <input type="text" placeholder="enter your task" id="enterTask"><br>
+        <button id="add">Add Task</button>
+        <br><br>
+        <ul id="tasklist"></ul>
+    </form>
+</body>
+<script>
+    let enterTask=document.getElementById("enterTask");
+    let add=document.getElementById("add");
+    let list=document.getElementById("tasklist");
+
+
+
+    add.addEventListener("click",(event)=>{
+        event.preventDefault();//i didnt gave focus on this this stops form refreshing instantly
+        if(enterTask.value.trim()===""){ //i just wrote enterTask===""
+            alert("please enter some value");
+        }
+        else{
+            const li=document.createElement("li");
+            list.appendChild(li);
+            li.innerText=enterTask.value;//i was mistaken here
+        }
+    })
+    
+</script>
+</html>

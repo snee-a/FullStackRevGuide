@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Counter App</h1>
+    <h3 id="h3">0</h3>
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+    <button id="reset">reset</button>
+</body>
+<script>
+    let count=0;
+    let h3=document.getElementById("h3");
+    let plus=document.getElementById("plus");
+    let minus=document.getElementById("minus");
+    let reset=document.getElementById("reset");
+
+    plus.addEventListener("click",()=>{
+        count++;
+        h3.innerText=count;
+    });
+    minus.addEventListener("click",()=>{
+        count--;
+        h3.innerText=count;
+    });
+    reset.addEventListener("click",()=>{
+        count=0;
+        h3.innerText=count;
+    })
+    
+</script>
+</html>
