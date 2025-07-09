@@ -1,0 +1,11 @@
+1-JSON data -
+
+ Json data is in the form of string
+we can get random json data from apis such as https://catfact.ninja/fact
+we can validate the Json data using online json validators and know more about json data using json.org
+
+2-Accessing Data in JSon-
+Json data comes in the form of string so we use Json.parse to parse string to js object
+
+let JsonRes='{"fact":"Neutering a cat extends its life span by two or three years.","length":60}'
+let validdata=jSon.parse(JsonRes);

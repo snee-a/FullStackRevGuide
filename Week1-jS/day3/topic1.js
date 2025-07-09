@@ -58,3 +58,7 @@ setTimeout(() => {
 
 }, 1000);
 
+// Callback Hell se bachne ke liye hi aaya:
+// ✅ Promises → next topic
+// ✅ Fir Async/Await → modern best practice
+// "Asynchronous" ka matlab hota hai: Kaam background me chal raha hai, aur baaki ka code rukta nahi hai.
