@@ -9,3 +9,22 @@ Json data comes in the form of string so we use Json.parse to parse string to js
 
 let JsonRes='{"fact":"Neutering a cat extends its life span by two or three years.","length":60}'
 let validdata=jSon.parse(JsonRes);
+
+in this jSon.parse we are converting json data to object
+
+json.stringify(json)-parse a json object to json
+
+Testing Api request- HOppscoth and postman
+
+
+3-AJAX- Asynchronous Javascript and XML
+    This is the process through which we send APi calls and recieve response which is a an asynchrounous process
+    jis bhi api ko ham req bhejenge to kuch response ata hai kuch saal phle jo response tha vo xml mai aya karta tha
+    ab ham xml use nahi karte par kyuki kafi time se ajax nam hogya to vhai bolte hai lekin use json hi hota hai
+
+4- Status code
+    200-ok
+    404-api not found
+    400- bad request
+    500- internal server error
+    
